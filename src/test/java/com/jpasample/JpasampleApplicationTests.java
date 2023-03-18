@@ -50,7 +50,12 @@ class JpasampleApplicationTests {
 		userRepository.save(user);
 	}
 
-
+	@Test
+	void JpaQueryAnnotation(){
+		userRepository.findByCustomeId(3L);
+		userRepository.updateName(3L, "changed");
+		System.out.println("------------------------");
+	}
 
 
 
